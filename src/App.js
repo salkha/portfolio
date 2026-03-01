@@ -6,18 +6,20 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import React, { useState } from 'react';
 
 function App() {
+  const [lang, setLang] = useState('en');
   return (
     <>
-      <Header />
+      <Header lang={lang} setLang={setLang} />
       <main className="container">
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <About lang={lang} />
+        <Skills lang={lang} />
+        <Projects lang={lang} />
+        <Contact lang={lang} />
       </main>
-      <Footer />
+      <Footer lang={lang} />
     </>
   );
 }

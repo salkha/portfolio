@@ -1,10 +1,12 @@
 import React from 'react';
+import translations from '../localization';
 
-function Footer() {
+function Footer({ lang }) {
+  const t = translations[lang];
   return (
     <footer className="footer">
       <div className="container">
-        &copy; 2026 Salman Khaled Ovi. All rights reserved.
+        {t.footer}
       </div>
     </footer>
   );

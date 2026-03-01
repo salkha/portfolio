@@ -1,17 +1,15 @@
 import React from 'react';
+import translations from '../localization';
 
-function Skills() {
+function Skills({ lang }) {
+  const t = translations[lang];
   return (
     <section className="skills">
-      <h3>Skills</h3>
+      <h3>{lang === 'en' ? 'Skills' : 'Fähigkeiten'}</h3>
       <ul className="skills-list">
-        <li>React.js & Frontend Development</li>
-        <li>Shopify & WordPress Theme Customization</li>
-        <li>JavaScript (ES6+), TypeScript</li>
-        <li>Python Scripting & Automation</li>
-        <li>API Integration & Data Workflows</li>
-        <li>Custom Widgets & Features</li>
-        <li>Problem Solving & Continuous Learning</li>
+        {t.skills.map((skill, idx) => (
+          <li key={idx}>{skill}</li>
+        ))}
       </ul>
     </section>
   );
