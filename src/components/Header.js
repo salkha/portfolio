@@ -1,11 +1,12 @@
 import React from 'react';
+import meImg from '../assets/me.png';
 
 function Header() {
   return (
     <header className="header">
       <div className="container header-content">
         <div className="profile-pic">
-          <img src={process.env.PUBLIC_URL + '/me.png'} alt="Profile Photo" />
+          <img src={meImg} alt="Profile Photo" />
         </div>
         <div>
           <h1>Salman Khaled Ovi</h1>
