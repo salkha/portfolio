@@ -2,6 +2,7 @@ const sampleCodes = {
   simpleCodeOne: {
     name: "Code One",
     id: "code1",
+    code_description: "This code calculates the distance between two geographical points using the Haversine formula and sorts a list of places based on their distance from a given latitude and longitude.",
     code: `function toRad(value) {
   return (value * Math.PI) / 180;
 }
@@ -34,6 +35,7 @@ export function sortPlacesByDistance(places, lat, lon) {
   simpleCodeTwo: {
     name: "Code Two",
     id: "code2",
+    code_description: "I built this reusable Modal component to solve a real company need: we required a flexible, accessible dialog for confirmations and forms that could be controlled from anywhere in our app. This solution made it easy for our team to add modals for user actions, improving both our workflow and the user experience.",
     code: `import { forwardRef, useImperativeHandle, useRef } from 'react';
 import { createPortal } from 'react-dom';
 
