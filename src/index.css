@@ -1,8 +1,8 @@
 /* Unified button styles */
 .main-btn {
-  background: #aee9f7;
-  color: #181c24;
-  border: 1px solid #aee9f7;
+  background: #e3eafc;
+  color: #22304a;
+  border: 1px solid #b6c6e3;
   border-radius: 6px;
   padding: 0.38em 1em;
   font-size: 0.98rem;
@@ -15,13 +15,11 @@
 .main-btn.active,
 .main-btn:focus,
 .main-btn:hover {
-  background: #232946;
-  color: #00ffd0;
-  border: 2px solid #00ffd0;
+  background: #22304a;
+  color: #e3eafc;
+  border: 2px solid #b6c6e3;
   outline: none;
-  transform: translateY(-4px) scale(1.08);
-  padding: 0.5em 1.2em;
-  box-shadow: 0 0 0 4px rgba(0,255,208,0.15);
+  box-shadow: 0 0 0 4px rgba(34,48,74,0.10);
 }
 
 .lang-btn-group {
@@ -30,6 +28,14 @@
     align-items: center;
     justify-content: right;
     padding-right: 30px;
+}
+
+.lang-btn-group > .main-btn {
+  font-size: 0.85rem;
+  padding: 0.25em 0.7em;
+  border-radius: 4px;
+  min-width: 36px;
+  margin: 0 0.1em;
 }
 
 .code-btn-group {
@@ -119,8 +125,8 @@ body {
   margin-top: 1.2rem;
 }
 .nav-btn {
-  background: #aee9f7;
-  color: #181c24;
+  background: #e3eafc;
+  color: #22304a;
   border: none;
   border-radius: 6px;
   padding: 0.38em 1em;
@@ -131,20 +137,18 @@ body {
   transition: background 0.2s, transform 0.2s;
 }
 .nav-btn:hover {
-  background: #232946;
-  color: #00ffd0;
+  background: #22304a;
+  color: #e3eafc;
   transform: translateY(-2px) scale(1.04);
 }
 
 .nav-btn.active,
 .nav-btn:focus {
-  background: #232946;
-  color: #00ffd0;
+  background: #22304a;
+  color: #e3eafc;
   outline: none;
-  border: 2px solid #00ffd0;
-  transform: translateY(-4px) scale(1.08);
-  padding: 0.5em 1.2em;
-  box-shadow: 0 0 0 4px rgba(0,255,208,0.15);
+  border: 2px solid #b6c6e3;
+  box-shadow: 0 0 0 4px rgba(34,48,74,0.10);
 }
 
 @media (max-width: 900px) {
@@ -185,8 +189,8 @@ body {
   transition: box-shadow 0.3s, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .profile-pic img:hover {
-  box-shadow: 0 0 40px 10px #00ffd0, 0 4px 32px rgba(0,0,0,0.45);
-  transform: scale(1.08);
+  box-shadow: 0 0 10px 2px #b6c6e3, 0 2px 8px rgba(0,0,0,0.18);
+  transform: scale(1.02);
 }
 
 /* Modal styles */

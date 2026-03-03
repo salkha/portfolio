@@ -1,6 +1,6 @@
 const sampleCodes = {
   simpleCodeOne: {
-    name: "Code One",
+    name: "Haversine Distance & Sort Utility",
     id: "code1",
     code_description: "This code calculates the distance between two geographical points using the Haversine formula and sorts a list of places based on their distance from a given latitude and longitude.",
     code: `function toRad(value) {
@@ -33,7 +33,7 @@ export function sortPlacesByDistance(places, lat, lon) {
 }`
   },
   simpleCodeTwo: {
-    name: "Code Two",
+    name: "Reusable Modal Component (React)",
     id: "code2",
     code_description: "I built this reusable Modal component to solve a real company need: we required a flexible, accessible dialog for confirmations and forms that could be controlled from anywhere in our app. This solution made it easy for our team to add modals for user actions, improving both our workflow and the user experience.",
     code: `import { forwardRef, useImperativeHandle, useRef } from 'react';
@@ -65,7 +65,7 @@ export default Modal;
 `
   },
   simpleCodeThree: {
-    name: "Code Three",
+    name: "Haversine Distance & Sort Utility (Alt)",
     id: "code3",
     code: `function toRad(value) {
   return (value * Math.PI) / 180;
@@ -97,7 +97,7 @@ export function sortPlacesByDistance(places, lat, lon) {
 }`
   },
   simpleCodeFour: {
-    name: "Code Four",
+    name: "Reverse String Function",
     id: "code4",
     code: `function reverseString(str) {
   return str.split('').reverse().join('');
@@ -105,7 +105,7 @@ export function sortPlacesByDistance(places, lat, lon) {
 console.log(reverseString('hello'));`
   },
   simpleCodeFive: {
-    name: "Code Five",
+    name: "Recursive Factorial Function",
     id: "code5",
     code: `function factorial(n) {
   if (n <= 1) return 1;
@@ -114,7 +114,7 @@ console.log(reverseString('hello'));`
 console.log(factorial(5));`
   },
   simpleCodeSix: {
-    name: "Code Six",
+    name: "Array Sum with Reduce",
     id: "code6",
     code: `const arr = [1, 2, 3, 4, 5];
 const sum = arr.reduce((acc, val) => acc + val, 0);

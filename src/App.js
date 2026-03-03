@@ -27,9 +27,9 @@ function App() {
             path="/"
             element={
               <>
+                <About lang={lang} />
                 <Skills lang={lang} />
                 <Projects lang={lang} />
-                <About lang={lang} />
                 <Contact lang={lang} />
               </>
             }
