@@ -30,6 +30,7 @@ const translations = {
       githubLabel: "GitHub",
       linkedinLabel: "LinkedIn"
     },
+    codeHeading: "Code Example",
     footer: "© 2026 Salman Khaled Ovi. All rights reserved."
   },
   de: {
@@ -63,6 +64,7 @@ const translations = {
       githubLabel: "GitHub",
       linkedinLabel: "LinkedIn"
     },
+    codeHeading: "Code-Beispiel",
     footer: "© 2026 Salman Khaled Ovi. Alle Rechte vorbehalten."
   }
 };

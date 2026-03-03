@@ -1,9 +1,11 @@
 import React from 'react';
 import meImg from '../assets/me.png';
 import translations from '../localization';
+import { useNavigate } from 'react-router-dom';
 
 function Header({ lang, setLang }) {
   const t = translations[lang];
+  const navigate = useNavigate();
   return (
     <header className="header">
       <div className="container header-content">
@@ -43,6 +45,10 @@ function Header({ lang, setLang }) {
             }}
           >DE</button>
         </div>
+      </div>
+      <div className="header-nav-btns">
+        <button className="nav-btn" onClick={() => navigate('/')}>{lang === 'en' ? 'Home' : 'Startseite'}</button>
+        <button className="nav-btn" onClick={() => navigate('/coding-skills')}>{lang === 'en' ? 'Coding Skills' : 'Coding-Fähigkeiten'}</button>
       </div>
     </header>
   );

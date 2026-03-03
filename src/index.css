@@ -24,10 +24,62 @@ body {
   width: 100vw;
   z-index: 100;
 }
+/* ...existing code... */
 .header-content {
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+
+.header-nav-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+.nav-btn {
+  background: #eebbc3;
+  color: #232946;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5em 1.3em;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(35,41,70,0.08);
+  transition: background 0.2s, transform 0.2s;
+}
+.nav-btn:hover {
+  background: #b8c1ec;
+  color: #232946;
+  transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 900px) {
+  .header-nav-btns {
+    gap: 0.7rem;
+    margin-top: 1rem;
+  }
+  .nav-btn {
+    font-size: 0.95rem;
+    padding: 0.45em 1em;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-nav-btns {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.7rem;
+    align-items: center;
+  }
+  .nav-btn {
+    width: 90vw;
+    max-width: 320px;
+    font-size: 0.95rem;
+    padding: 0.5em 0.5em;
+    border-radius: 8px;
+  }
 }
 .profile-pic img {
   width: 250px;
