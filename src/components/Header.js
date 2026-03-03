@@ -17,32 +17,14 @@ function Header({ lang, setLang }) {
           <h2>{t.header.title}</h2>
           <p className="subtitle">{t.header.subtitle}</p>
         </div>
-        <div style={{ marginLeft: 'auto', display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+        <div className="lang-btn-group">
           <button
+            className={`main-btn lang-btn${lang === 'en' ? ' active' : ''}`}
             onClick={() => setLang('en')}
-            style={{
-              background: lang === 'en' ? '#eebbc3' : '#fff',
-              color: lang === 'en' ? '#232946' : '#232946',
-              border: '1px solid #eebbc3',
-              borderRadius: '4px',
-              padding: '0.3em 0.8em',
-              cursor: 'pointer',
-              fontWeight: lang === 'en' ? 'bold' : 'normal',
-              transition: 'background 0.2s',
-            }}
           >EN</button>
           <button
+            className={`main-btn lang-btn${lang === 'de' ? ' active' : ''}`}
             onClick={() => setLang('de')}
-            style={{
-              background: lang === 'de' ? '#eebbc3' : '#fff',
-              color: lang === 'de' ? '#232946' : '#232946',
-              border: '1px solid #eebbc3',
-              borderRadius: '4px',
-              padding: '0.3em 0.8em',
-              cursor: 'pointer',
-              fontWeight: lang === 'de' ? 'bold' : 'normal',
-              transition: 'background 0.2s',
-            }}
           >DE</button>
         </div>
       </div>

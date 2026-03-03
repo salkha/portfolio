@@ -26,9 +26,13 @@ const translations = {
       }
     ],
     contact: {
-      emailLabel: "Email",
-      githubLabel: "GitHub",
-      linkedinLabel: "LinkedIn"
+
+      contactText: "Feel free to reach out to me via email or connect with me on GitHub and LinkedIn.",
+      contactLinks: [
+        { label: "Email", url: "mailto:example@example.com" },
+        { label: "GitHub", url: "https://github.com/username" },
+        { label: "LinkedIn", url: "https://www.linkedin.com/in/username/" }
+      ]
     },
     codeHeading: "Code Example",
     footer: "© 2026 Salman Khaled Ovi. All rights reserved."
@@ -60,9 +64,12 @@ const translations = {
       }
     ],
     contact: {
-      emailLabel: "E-Mail",
-      githubLabel: "GitHub",
-      linkedinLabel: "LinkedIn"
+      contactText: "Feel free to reach out to me via email or connect with me on GitHub and LinkedIn.",
+      contactLinks: [
+        { label: "Email", url: "mailto:example@example.com" },
+        { label: "GitHub", url: "https://github.com/username" },
+        { label: "LinkedIn", url: "https://www.linkedin.com/in/username/" }
+      ]
     },
     codeHeading: "Code-Beispiel",
     footer: "© 2026 Salman Khaled Ovi. Alle Rechte vorbehalten."
