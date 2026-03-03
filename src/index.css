@@ -1,8 +1,8 @@
 /* Unified button styles */
 .main-btn {
-  background: #eebbc3;
-  color: #232946;
-  border: 1px solid #eebbc3;
+  background: #aee9f7;
+  color: #181c24;
+  border: 1px solid #aee9f7;
   border-radius: 6px;
   padding: 0.38em 1em;
   font-size: 0.98rem;
@@ -15,11 +15,13 @@
 .main-btn.active,
 .main-btn:focus,
 .main-btn:hover {
-  background: #b8c1ec;
-  color: #232946;
-  border: 2px solid #b8c1ec;
+  background: #232946;
+  color: #00ffd0;
+  border: 2px solid #00ffd0;
   outline: none;
-  transform: translateY(-2px) scale(1.04);
+  transform: translateY(-4px) scale(1.08);
+  padding: 0.5em 1.2em;
+  box-shadow: 0 0 0 4px rgba(0,255,208,0.15);
 }
 
 .lang-btn-group {
@@ -38,7 +40,8 @@
 }
 
 .code-block {
-  max-height: 300px;
+  max-height: 500px;
+  height: 500px;
   overflow: auto;
   border-radius: 8px;
   background: #232946;
@@ -90,7 +93,7 @@ body {
 
 .header {
   background: #181c24;
-  color: #eebbc3;
+  color: #aee9f7;
   padding: 1.2rem 0 1rem 0;
   box-shadow: 0 2px 8px rgba(35,41,70,0.18);
   position: sticky;
@@ -116,8 +119,8 @@ body {
   margin-top: 1.2rem;
 }
 .nav-btn {
-  background: #eebbc3;
-  color: #232946;
+  background: #aee9f7;
+  color: #181c24;
   border: none;
   border-radius: 6px;
   padding: 0.38em 1em;
@@ -128,18 +131,20 @@ body {
   transition: background 0.2s, transform 0.2s;
 }
 .nav-btn:hover {
-  background: #b8c1ec;
-  color: #232946;
+  background: #232946;
+  color: #00ffd0;
   transform: translateY(-2px) scale(1.04);
 }
 
 .nav-btn.active,
 .nav-btn:focus {
-  background: #b8c1ec;
-  color: #232946;
+  background: #232946;
+  color: #00ffd0;
   outline: none;
-  border: 2px solid #b8c1ec;
-  transform: translateY(-2px) scale(1.04);
+  border: 2px solid #00ffd0;
+  transform: translateY(-4px) scale(1.08);
+  padding: 0.5em 1.2em;
+  box-shadow: 0 0 0 4px rgba(0,255,208,0.15);
 }
 
 @media (max-width: 900px) {
@@ -177,10 +182,11 @@ body {
   background: #232946;
   box-shadow: 0 2px 16px rgba(0,0,0,0.25);
   cursor: pointer;
-  transition: width 0.3s, height 0.3s, box-shadow 0.2s;
+  transition: box-shadow 0.3s, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .profile-pic img:hover {
-  box-shadow: 0 4px 32px rgba(0,0,0,0.35);
+  box-shadow: 0 0 40px 10px #00ffd0, 0 4px 32px rgba(0,0,0,0.45);
+  transform: scale(1.08);
 }
 
 /* Modal styles */
@@ -364,8 +370,8 @@ section h3 {
 }
 
 .footer {
-  background: #232946;
-  color: #fff;
+  background: #181c24;
+  color: #aee9f7;
   text-align: center;
   padding: 1.5rem 0;
   margin-top: 3rem;
