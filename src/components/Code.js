@@ -3,7 +3,6 @@ import Prism from "prismjs";
 import "prismjs/themes/prism-okaidia.css";
 import "prismjs/components/prism-javascript";
 import sampleCodes from "./sampleCodes";
-import translations from '../localization';
 
 export default function Code({ lang }) {
   const codeList = useMemo(
@@ -16,7 +15,6 @@ export default function Code({ lang }) {
     Prism.highlightAll();
   }, [activeIdx]);
 
-  const t = translations[lang] || translations['en'];
 
   return (
     <section>
