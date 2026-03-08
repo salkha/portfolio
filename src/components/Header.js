@@ -19,26 +19,30 @@ function Header({ lang, setLang }) {
           onClick={() => setLang('de')}
         >DE</button>
       </div>
-      <div className="header-content">
-        <div className="profile-pic">
-          <img src={meImg} alt="Profile" />
+
+      <div className='header-element'>
+        <div className="header-content">
+          <div className="profile-pic">
+            <img src={meImg} alt="Profile" />
+          </div>
+          <div>
+            <h1>{t.header.name}</h1>
+            <h2>{t.header.title}</h2>
+            <p className="subtitle">{t.header.subtitle}</p>
+          </div>
         </div>
-        <div>
-          <h1>{t.header.name}</h1>
-          <h2>{t.header.title}</h2>
-          <p className="subtitle">{t.header.subtitle}</p>
+        <div className="header-content header-nav-btns">
+          <button
+            className={`nav-btn${location.pathname === '/' ? ' active' : ''}`}
+            onClick={() => navigate('/')}
+          >{lang === 'en' ? 'Home' : 'Startseite'}</button>
+          <button
+            className={`nav-btn${location.pathname === '/coding-skills' ? ' active' : ''}`}
+            onClick={() => navigate('/coding-skills')}
+          >{lang === 'en' ? 'Coding Skills' : 'Coding-Skills'}</button>
         </div>
       </div>
-      <div className="container header-content header-nav-btns">
-        <button
-          className={`nav-btn${location.pathname === '/' ? ' active' : ''}`}
-          onClick={() => navigate('/')}
-        >{lang === 'en' ? 'Home' : 'Startseite'}</button>
-        <button
-          className={`nav-btn${location.pathname === '/coding-skills' ? ' active' : ''}`}
-          onClick={() => navigate('/coding-skills')}
-        >{lang === 'en' ? 'Coding Skills' : 'Coding-Fähigkeiten'}</button>
-      </div>
+
     </header>
   );
 }
