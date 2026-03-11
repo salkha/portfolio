@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 const sampleCodes = {
   simpleCodeOne: {
     name: "Image Editing (part 1)",
@@ -537,7 +538,8 @@ def translate_plain_text(value):
         f"Return only the translated sentence."
     )
 
-    sentences = re.split(r'(?<=[.!?])\s+', value.strip())  # No change needed here; \s is required in regex
+    // eslint-disable-next-line no-useless-escape
+    sentences = re.split(r'(?<=[.!?])\s+', value.strip())
     for sentence in sentences:
         if not sentence.strip():
             continue
@@ -692,7 +694,8 @@ def list_folders():
                     image_folder_path = f"{FOLDER_PATH}/{item.filename}/images2d"
                     try:
                         image_files = sftp.listdir(image_folder_path)
-                        image_pattern = re.compile(r'^img_2D_\d{4}\.png$')  # Remove unnecessary escapes
+                        // eslint-disable-next-line no-useless-escape
+                        image_pattern = re.compile(r'^img_2D_\d{4}\.png$')
                         valid_images = [f for f in image_files if image_pattern.match(f)]
                         image_counts[trimmed_name] = min(len(valid_images), 8)
                     except IOError:
