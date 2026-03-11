@@ -2,10 +2,13 @@
 import React from 'react';
 import translations from '../localization';
 
-function CodingPagination({ total, current, onChange }) {
-  // Use English as default, or pass lang as prop if available
-  const lang = (typeof window !== 'undefined' && window.navigator.language.startsWith('de')) ? 'de' : 'en';
-  const t = translations[lang] || translations['en'];
+function CodingPagination({ total, current, onChange, lang }) {
+  // Fallback to 'en' if lang is not provided
+  const usedLang = lang || 'en';
+  if (!lang) {
+    console.warn('CodingPagination: lang prop not provided, defaulting to "en".');
+  }
+  const t = translations[usedLang] || translations['en'];
   return (
     <div className="coding-pagination">
       <p>{t.codeSnippetIntro}</p>

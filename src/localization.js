@@ -1,4 +1,3 @@
-
 const translations = {
   en: {
     header: {
@@ -8,42 +7,47 @@ const translations = {
     about: "I am Ovi, a Web Developer at Shoepassion GmbH, specializing in frontend development with solid backend experience. I create flexible, user-friendly web applications and tackle technical challenges with clear, well-structured code. Currently, I am deepening my knowledge of React.js and modern frontend frameworks to stay up to date with the latest technologies.",
     codeSnippetIntro: "Here is a code snippet from my projects at my current job. Maybe with this snippet, you get a sense of what I actually do in my code. I haven't had time to build many personal projects, but this is what I'm working on right now.",
     skills: [
-      "React",
       "HTML",
       "CSS",
-      "JavaScript (ES6+)",
-      "TypeScript",
+      "JavaScript",
       "Python",
-      "GraphQL",
-      "API Integration",
-      "Automation Scripts",
-      "Image Processing",
-      "ETL Workflows",
-      "Data Processing",
-      "Custom Widgets",
-
+      "GraphQL (Foundational knowledge)",
+      "SQL (Foundational knowledge)",
+      "Liquid (Experience developing Shopify themes)",
+      "PHP (Experience developing WordPress themes)",
+      "React (Currently learning via a Udemy course)",
     ],
     more_skills: [
       "Shopify",
-      "Shopify Theme Development",
-      "Liquid",
       "WordPress",
-      "WordPress Theme Development",
-      "OpenAI API",
       "N8N",
-      "E-Commerce Systems",
-      "PIM Systems",
+      "Magento 1",
+      "Plytix (PIM System)",
+      "Pixi (Warehouse Management System)",
+      "GitHub",
+      "Bitbucket",
+      "ChatGPT",
+      "Klaviyo",
+      "Lugis Box",
+      "DataFeedWatch"
     ],
     more_soft_skills: [
-      "System Integration",
-      "Technical Testing",
-      "Problem Solving",
-      "Team Collaboration"
+
+      "Technical Testing (Python scripts to validate Shopify product data via GraphQL API)",
+      "Team Collaboration (Supported marketing, accounting, and product teams on IT tasks)",
+      "API Integration (Extracted Klaviyo data and saved as CSV for Power BI)",
+      "Automation Scripts (Imported bulk data to Shopify from PIM via N8N automation)",
+      "Image Processing (Python scripts to remove backgrounds, crop, and edit product images)",
+      "ETL Workflows (Extracted, transformed, and loaded data from multiple sources)",
+      "Custom Widgets (Developed Shopify and WordPress custom widgets)",
+      "Partner Coordination (Communicated with third-party services like ShopConnect, Toolbox, and Shopney to resolve technical issues and implement solutions)",
+      "System Integration (Created email accounts and configured DNS settings)",
     ],
     projectsIntro: "Currently, I work in a small team where I handle both frontend and backend tasks as well as parts of system integration. Due to limited resources, I am often responsible for several technical areas at the same time. This has allowed me to build a comprehensive understanding of various aspects of web development and related systems.",
     projectsParagraphs: [
-      "I feel most comfortable working on frontend applications. At the same time, I regularly work with GraphQL, SQL, API integrations, as well as e-commerce, warehouse, and product management systems. I also use tools like GitHub Copilot and ChatGPT to make my workflow more efficient and structured.",
-      "For my further professional development, I am looking for an environment with more technical exchange, clearer structures, and the opportunity to focus more on frontend development. I would like to actively contribute my previous experience and further develop my skills in a larger developer team."
+      "I feel most comfortable working on frontend applications. At the same time, I occasionally work with GraphQL, SQL, and API integrations, as well as e-commerce, warehouse, product management systems, and feed management systems like DataFeed Watch. I also use tools such as GitHub, Bitbucket, GitHub Copilot, and ChatGPT to make my workflow more efficient and structured.",
+
+      "For my further professional development, I am looking for an environment with more technical exchange, clearer structures, and the opportunity to focus more on frontend development. I would like to actively contribute my previous experience and further develop my skills within a larger developer team."
     ],
     projects: [{
         title: "Frontend and Backend Development in E-Commerce",
@@ -101,9 +105,9 @@ const translations = {
     },
     skillsSectionTitles: {
       main: "Skills",
-      technical: "Technical Skills",
-      more: "More Skills",
-      soft: "Soft Skills"
+      technical: "Programming Languages I worked with",
+      more: "Tools I worked with",
+      soft: "Practical Projects & Implementations"
     },
     codeHeading: "Code Example",
     footer: "© 2026 Salman Khaled Ovi. All rights reserved."
@@ -111,114 +115,92 @@ const translations = {
   de: {
     header: {
       name: "Salman Khaled Ovi",
-      title: "Web Entwickler",
-      // subtitle removed as requested
+      title: "Webentwickler"
     },
-    about: "Ich bin Ovi, Webentwickler bei Shoepassion GmbH, spezialisiert auf Frontend-Entwicklung mit fundierter Erfahrung im Backend. Ich entwickle flexible, benutzerfreundliche Webanwendungen und löse technische Herausforderungen mit klarem, gut strukturiertem Code. Derzeit vertiefe ich mein Wissen in React.js und modernen Frontend-Frameworks, um stets auf dem neuesten Stand der Technologie zu bleiben. ",
-    codeSnippetIntro: "Hier ist ein Code-Snippet aus meinen aktuellen Projekten im Job. Vielleicht bekommst du damit einen Eindruck davon, was ich tatsächlich in meinem Code mache. Ich hatte bisher keine Zeit für viele eigene Projekte, aber das ist das, woran ich gerade arbeite.",
+    about: "Ich bin Ovi, Webentwickler bei Shoepassion GmbH, spezialisiert auf Frontend-Entwicklung mit soliden Backend-Kenntnissen. Ich erstelle flexible, benutzerfreundliche Webanwendungen und löse technische Herausforderungen mit klar strukturiertem Code. Derzeit vertiefe ich mein Wissen in React.js und modernen Frontend-Frameworks, um stets auf dem neuesten Stand der Technik zu bleiben.",
+    codeSnippetIntro: "Hier ist ein Code-Snippet aus meinen Projekten bei meiner aktuellen Arbeit. Vielleicht bekommen Sie anhand dieses Snippets einen Eindruck davon, was ich tatsächlich in meinem Code mache. Ich hatte bisher keine Zeit, viele persönliche Projekte zu entwickeln, aber dies ist, woran ich gerade arbeite.",
     skills: [
-      "React",
       "HTML",
       "CSS",
-      "JavaScript (ES6+)",
-      "TypeScript",
+      "JavaScript",
       "Python",
-      "GraphQL",
-      "API Integration",
-      "Automation Scripts",
-      "Image Processing",
-      "ETL Workflows",
-      "Data Processing",
-      "Custom Widgets",
-
-
-
-
+      "GraphQL (Grundkenntnisse)",
+      "SQL (Grundkenntnisse)",
+      "Liquid (Erfahrung in der Entwicklung von Shopify-Themes)",
+      "PHP (Erfahrung in der Entwicklung von WordPress-Themes)",
+      "React (Derzeit über einen Udemy-Kurs lernend)"
     ],
     more_skills: [
       "Shopify",
-      "Shopify Theme Development",
-      "Liquid",
       "WordPress",
-      "WordPress Theme Development",
-      "OpenAI API",
       "N8N",
-      "E-Commerce Systems",
-      "PIM Systems",
+      "Magento 1",
+      "Plytix (PIM-System)",
+      "Pixi (Warehouse Management System)",
+      "GitHub",
+      "Bitbucket",
+      "ChatGPT",
+      "Klaviyo",
+      "Lugis Box",
+      "DataFeedWatch"
     ],
     more_soft_skills: [
-      "System Integration",
-      "Technical Testing",
-      "Problem Solving",
-      "Team Collaboration"
+      "Technische Tests (Python-Skripte zur Validierung von Shopify-Produktdaten über GraphQL-API)",
+      "Teamzusammenarbeit (Unterstützung von Marketing-, Buchhaltungs- und Produktteams bei IT-Aufgaben)",
+      "API-Integration (Extraktion von Klaviyo-Daten und Speicherung als CSV für Power BI)",
+      "Automatisierungsskripte (Import von Massendaten in Shopify aus PIM über N8N-Automatisierung)",
+      "Bildbearbeitung (Python-Skripte zum Entfernen von Hintergründen, Zuschneiden und Bearbeiten von Produktbildern)",
+      "ETL-Workflows (Extraktion, Transformation und Laden von Daten aus mehreren Quellen)",
+      "Benutzerdefinierte Widgets (Entwicklung von Shopify- und WordPress-Widgets)",
+      "Partnerkoordination (Kommunikation mit Drittanbietern wie ShopConnect, Toolbox und Shopney zur Lösung technischer Probleme und Implementierung von Lösungen)",
+      "Systemintegration (Erstellung von E-Mail-Konten und Konfiguration von DNS-Einstellungen)"
     ],
-
-    projectsIntro: "Derzeit arbeite ich in einem kleinen Team, in dem ich sowohl Frontend- als auch Backend-Aufgaben sowie Teile der Systemintegration übernehme. Aufgrund der begrenzten Ressourcen bin ich häufig für mehrere technische Bereiche gleichzeitig verantwortlich. Dadurch konnte ich ein umfassendes Verständnis verschiedener Aspekte der Web-Entwicklung und angrenzender Systeme aufbauen.",
+    projectsIntro: "Derzeit arbeite ich in einem kleinen Team, in dem ich sowohl Frontend- als auch Backend-Aufgaben sowie Teile der Systemintegration übernehme. Aufgrund begrenzter Ressourcen bin ich häufig für mehrere technische Bereiche gleichzeitig verantwortlich. Dies hat mir ermöglicht, ein umfassendes Verständnis verschiedener Aspekte der Webentwicklung und verwandter Systeme zu entwickeln.",
     projectsParagraphs: [
-      "Besonders wohl fühle ich mich in der Entwicklung von Frontend-Applikationen. Gleichzeitig arbeite ich regelmäßig mit GraphQL, SQL, API-Anbindungen sowie E-Commerce-, Warehouse- und Product-Management-Systemen. Zusätzlich nutze ich Tools wie GitHub Copilot und ChatGPT, um meinen Arbeitsprozess effizienter und strukturierter zu gestalten.",
-      "Für meine weitere berufliche Entwicklung wünsche ich mir ein Umfeld mit größerem fachlichen Austausch, klareren Strukturen und der Möglichkeit, mich stärker auf die Frontend-Entwicklung zu fokussieren. Dabei möchte ich meine bisherigen Erfahrungen aktiv einbringen und meine Kenntnisse in einem größeren Entwicklerteam gezielt weiter ausbauen."
+      "Am wohlsten fühle ich mich bei der Arbeit an Frontend-Anwendungen. Gleichzeitig arbeite ich gelegentlich mit GraphQL, SQL und API-Integrationen sowie E-Commerce-, Lager-, Produktmanagementsystemen und Feed-Management-Systemen wie DataFeedWatch. Ich nutze auch Tools wie GitHub, Bitbucket, GitHub Copilot und ChatGPT, um meinen Workflow effizienter und strukturierter zu gestalten.",
+      "Für meine weitere berufliche Entwicklung suche ich ein Umfeld mit mehr technischem Austausch, klareren Strukturen und der Möglichkeit, mich stärker auf Frontend-Entwicklung zu konzentrieren. Ich möchte meine bisherigen Erfahrungen aktiv einbringen und meine Fähigkeiten innerhalb eines größeren Entwicklerteams weiterentwickeln."
     ],
     projects: [{
         title: "Frontend- und Backend-Entwicklung im E-Commerce",
-        description: ""
+        description: "Umfassende Arbeiten an Frontend- und Backend-Projekten, einschließlich Anpassung von Shopify- und WordPress-Themes und Entwicklung benutzerdefinierter Funktionen."
       },
       {
-        title: "Migration von Magento zu Shopify",
-        description: ""
+        title: "Python-Skripte für Automatisierung und Datenverarbeitung",
+        description: "Entwicklung von Skripten für Automatisierung, Bildbearbeitung und Datenhandling für interne Workflows und Marktplätze."
       },
       {
-        title: "Shopify-Theme-Entwicklung mit Liquid",
-        description: ""
+        title: "API-Integrationen & OpenAI-Workflows",
+        description: "Integration verschiedener APIs, einschließlich der OpenAI-API, zur Automatisierung von Übersetzungen und Datenprozessen in Shopify."
       },
       {
-        title: "Shopify-App-Integration und individuelle Funktionen",
-        description: ""
+        title: "ETL-Prozesse für interne Analysen",
+        description: "Aufbereitung und Transformation von Daten für interne Analysen, z. B. für die Verwendung in Power BI."
       },
       {
-        title: "WordPress-Seiten- und Theme-Entwicklung",
-        description: ""
+        title: "Shopify-App-Integration & benutzerdefinierte Features",
+        description: "Installation, Anpassung und Integration von Shopify-Apps sowie Entwicklung von benutzerdefinierten Tools und Widgets."
       },
       {
-        title: "Python-Skripte für Automatisierung, Datenverarbeitung und Bildbearbeitung",
-        description: ""
+        title: "Arbeiten mit E-Commerce- und PIM-Systemen",
+        description: "Erfahrung mit Shopify, WordPress, Pixi (Warehouse Management System) und Plytix (Product Information Management)."
       },
       {
-        title: "API-Integrationen und Shopify GraphQL",
-        description: ""
+        title: "Integration externer Tools",
+        description: "Integration externer Tools wie Klaviyo und Lugis Box zur Optimierung von Workflows und Marketingprozessen."
       },
       {
-        title: "OpenAI-Integration für Übersetzungen und Automatisierung",
-        description: ""
+        title: "Technische Tests & Systemoptimierung",
+        description: "Durchführung technischer Tests, Optimierung und kontinuierliche Verbesserung interner Systeme."
       },
       {
-        title: "ETL-Prozesse für interne Datenanalysen",
-        description: ""
-      },
-      {
-        title: "Entwicklung interner Tools, Widgets und Automatisierungen mit N8N",
-        description: ""
-      },
-      {
-        title: "Arbeit mit E-Commerce-, PIM- und Warehouse-Systemen",
-        description: ""
-      },
-      {
-        title: "Integration externer Tools und Services",
-        description: ""
-      },
-      {
-        title: "Technische Tests und Systemoptimierung",
-        description: ""
-      },
-      {
-        title: "Zusammenarbeit mit Fachabteilungen und Team-Support",
-        description: ""
+        title: "Zusammenarbeit & Teamunterstützung",
+        description: "Enge Zusammenarbeit mit verschiedenen Abteilungen, Systemintegration, IT-Support, Einrichtung von Arbeitsplätzen und technische Unterstützung für neue Teammitglieder."
       }
     ],
     contact: {
-      contactText: "Sie können mich gerne per E-Mail kontaktieren oder sich meine Arbeit auf GitHub und LinkedIn ansehen.",
+      contactText: "Sie können mich gerne per E-Mail kontaktieren oder mehr über meine Arbeit auf GitHub und LinkedIn erfahren.",
       contactLinks: [{
-          label: "Email",
+          label: "E-Mail",
           url: "mailto:salmankhaledovi@gmail.com"
         },
         {
@@ -233,9 +215,9 @@ const translations = {
     },
     skillsSectionTitles: {
       main: "Fähigkeiten",
-      technical: "Technische Fähigkeiten",
-      more: "Weitere Fähigkeiten",
-      soft: "Soziale Kompetenzen"
+      technical: "Programmiersprachen, mit denen ich gearbeitet habe",
+      more: "Tools, mit denen ich gearbeitet habe",
+      soft: "Praktische Projekte & Implementierungen"
     },
     codeHeading: "Code-Beispiel",
     footer: "© 2026 Salman Khaled Ovi. Alle Rechte vorbehalten."
