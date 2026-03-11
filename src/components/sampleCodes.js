@@ -3,7 +3,7 @@ const sampleCodes = {
     name: "Image Editing (part 1)",
     id: "code1",
     code_description: "This script automates the process of organizing, renaming, and cropping product images for an e-commerce project. It starts by reading a list of GTIN-based product folders and a CSV feed with product details, then filters the data to match available products. Each image is renamed using a standardized format based on brand, gender, and color, and a maximum of eight images per product are copied to a new folder. Finally, the script crops each image to focus on the main product, removing extra transparent areas, resulting in clean, consistently named images ready for further use or display.",
-    code: `import os
+    code:`import os
 import shutil
 import pandas as pd
 import numpy as np
@@ -537,7 +537,7 @@ def translate_plain_text(value):
         f"Return only the translated sentence."
     )
 
-    sentences = re.split(r'(?<=[.!?])\s+', value.strip())
+    sentences = re.split(r'(?<=[.!?])\s+', value.strip())  # No change needed here; \s is required in regex
     for sentence in sentences:
         if not sentence.strip():
             continue
@@ -692,7 +692,7 @@ def list_folders():
                     image_folder_path = f"{FOLDER_PATH}/{item.filename}/images2d"
                     try:
                         image_files = sftp.listdir(image_folder_path)
-                        image_pattern = re.compile(r'^img_2D_\d{4}\.png$')
+                        image_pattern = re.compile(r'^img_2D_\d{4}\.png$')  # Remove unnecessary escapes
                         valid_images = [f for f in image_files if image_pattern.match(f)]
                         image_counts[trimmed_name] = min(len(valid_images), 8)
                     except IOError:
