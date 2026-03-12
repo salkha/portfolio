@@ -41,7 +41,7 @@ function App() {
             element={
               <>
                 {/* CodingPagination and Code components */}
-                <CodingPagination />
+                <CodingPagination lang={lang} />
                 <Code lang={lang} />
               </>
             }

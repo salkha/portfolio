@@ -31,12 +31,51 @@ p {
   box-shadow: 0 0 0 4px rgba(34, 48, 74, 0.10);
 }
 
+
 .lang-btn-group {
   display: flex;
   gap: 0.5rem;
   align-items: center;
   justify-content: right;
   padding-right: 30px;
+}
+
+@media (max-width: 600px) {
+  .lang-btn-group {
+    position: sticky !important;
+    z-index: 2 !important;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    background: #1db954;
+    border-radius: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    width: 100%;
+    min-width: unset;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .lang-btn-group > .main-btn {
+    font-size: 0.78rem;
+    padding: 0.12em 0.5em;
+    min-width: 26px;
+    border-radius: 6px;
+    margin: 0 0.05em;
+    height: 28px;
+    line-height: 1;
+  }
+  .main-btn.lang-btn,
+  .main-btn.lang-btn.active {
+    font-size: 0.78rem;
+    padding: 0.12em 0.5em;
+    min-width: 26px;
+    height: 28px;
+  }
 }
 
 .lang-btn-group>.main-btn {

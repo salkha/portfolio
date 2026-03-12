@@ -1,8 +1,10 @@
+
 import { useEffect, useState, useMemo } from "react";
 import Prism from "prismjs";
 import "prismjs/themes/prism-okaidia.css";
 import "prismjs/components/prism-javascript";
 import sampleCodes from "./sampleCodes";
+import translations from '../localization';
 
 export default function Code({ lang }) {
   const codeList = useMemo(
@@ -16,6 +18,7 @@ export default function Code({ lang }) {
   }, [activeIdx]);
 
 
+  const t = translations[lang] || translations['en'];
   return (
     <section>
       <div className="code-btn-group">
@@ -27,13 +30,14 @@ export default function Code({ lang }) {
             type="button"
             aria-pressed={activeIdx === idx}
           >
-            {item.name}
+            {t.codingButtonName && t.codingButtonName[idx] ? t.codingButtonName[idx] : item.name}
           </button>
         ))}
       </div>
-      <h2>{codeList[activeIdx].name}</h2>
-      {codeList[activeIdx].code_description && (
-        <p>{codeList[activeIdx].code_description}</p>
+      <h2>{t.codingButtonName && t.codingButtonName[activeIdx] ? t.codingButtonName[activeIdx] : codeList[activeIdx].name}</h2>
+      {/* Use code_description_X from localization.js for all code examples */}
+      {t[`code_description_${activeIdx + 1}`] && (
+        <p>{t[`code_description_${activeIdx + 1}`]}</p>
       )}
       <pre className="code-block">
         <code className="language-javascript">

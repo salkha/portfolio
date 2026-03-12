@@ -1,10 +1,9 @@
 /* eslint-disable no-useless-escape */
 const sampleCodes = {
-  simpleCodeOne: {
-    name: "Image Editing (part 1)",
-    id: "code1",
-    code_description: "This script automates the process of organizing, renaming, and cropping product images for an e-commerce project. It starts by reading a list of GTIN-based product folders and a CSV feed with product details, then filters the data to match available products. Each image is renamed using a standardized format based on brand, gender, and color, and a maximum of eight images per product are copied to a new folder. Finally, the script crops each image to focus on the main product, removing extra transparent areas, resulting in clean, consistently named images ready for further use or display.",
-    code:`import os
+    simpleCodeOne: {
+        name: "Image Editing (part 1)",
+        id: "code1",
+        code: `import os
 import shutil
 import pandas as pd
 import numpy as np
@@ -132,12 +131,11 @@ for _, row in filtered_df.iterrows():
     marke = handlize(row.get('Filter - Marke', ''))
     parent_color = handlize(row.get('Parent and color', ''))
     print(f"{gtin} {geschlecht} {marke} {parent_color}")`
-  },
-  simpleCodeTwo: {
-    name: "Image Editing (part 2)",
-    id: "code2",
-    code_description: "After the agency generates the additional 9th and 10th images, this script takes the renamed and cropped images and applies various platform-specific image profiles. It reorganizes and renames files according to custom rules, adds consistent backgrounds, adjusts padding, and ensures images are properly centered for each marketplace or storefront. The output is a set of ready-to-upload images for multiple platforms like Shopify, Fashionette, Breuninger, and others, with uniform sizes and visually optimized layouts.",
-    code: `import os
+    },
+    simpleCodeTwo: {
+        name: "Image Editing (part 2)",
+        id: "code2",
+        code: `import os
 import shutil
 import sys
 from PIL import Image
@@ -410,12 +408,11 @@ if __name__ == "__main__":
                     print("Available:", ", ".join(SETTINGS_PROFILES.keys()))
     else:
         print("Please specify a profile or 'all'.")`
-  },
-  simpleCodeThree: {
-    name: "Auto-Translate Shopify Collections",
-    id: "code3",
-    code_description: "This script automatically translates Shopify collection content from a source language into a target language using the OpenAI API. It retrieves translatable resources from Shopify via the GraphQL API, sends the content to the AI for translation while preserving HTML structure and placeholders, and then registers the translated text back into Shopify. The script intelligently handles both plain text and HTML sections (such as headings and paragraphs), ensuring formatting and dynamic variables remain intact. This allows stores to quickly generate and publish localized collection pages for multiple languages.",
-    code: `import shopify
+    },
+    simpleCodeThree: {
+        name: "Auto-Translate Shopify Collections",
+        id: "code3",
+        code: `import shopify
 import json
 import sys
 import re
@@ -631,12 +628,11 @@ def main():
 
 if __name__ == "__main__":
     main()`
-  },
-  simpleCodeFour: {
-    name: "Generate Image Feed from Server",
-    id: "code4",
-    code_description: "This script connects to a remote server via SFTP, scans product folders created within a specific date range, and counts available product images. It then matches those folders with product data from a CSV feed and automatically generates image URLs for each product. The script groups products by their parent ID, builds structured image galleries, and exports the result as a clean CSV file ready for marketplace or shop imports. This allows newly uploaded product images on the server to be quickly transformed into a usable product image feed.",
-    code: `import paramiko
+    },
+    simpleCodeFour: {
+        name: "Generate Image Feed from Server",
+        id: "code4",
+        code: `import paramiko
 import stat
 import pandas as pd
 from datetime import datetime, timedelta
@@ -831,12 +827,11 @@ if __name__ == "__main__":
     print(f"Looking for folders modified from {START_DATE_STR} to {END_DATE_STR}")
     folders, folder_mapping, image_counts = list_folders()
     create_matched_csv(folders, folder_mapping, image_counts)`
-  },
-  simpleCodeFive: {
-    name: "Update Supplier Prices from CSV",
-    id: "code5",
-    code_description: "This script reads a CSV file containing product item numbers, supplier identifiers, and new purchase prices (EK). It connects to the Pixi API, retrieves the existing suppliers for each product, and matches them with the supplier specified in the CSV. When a match is found, the script updates the supplier’s purchase price directly in Pixi. This enables quick and automated bulk updates of supplier costs while ensuring that only the correct supplier records are modified.",
-    code: `import csv
+    },
+    simpleCodeFive: {
+        name: "Update Supplier Prices from CSV",
+        id: "code5",
+        code: `import csv
 import pixi_api
 from dotenv import load_dotenv
 
@@ -952,12 +947,11 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"❌ Unexpected error: {e}")
 `
-  },
-  simpleCodeSix: {
-    name: "Store Locator Map (Shopify Widget)",
-    id: "code6",
-    code_description: "This Shopify section creates an interactive store locator with Google Maps integration. Store locations are defined in the section blocks and displayed both on the map as markers and in a searchable list. Users can search by store name, street, or city, and the map automatically centers and zooms when a store is selected from the list or when a marker is clicked. The layout is responsive, showing the map and store list side-by-side on desktop and stacked on mobile for an optimized browsing experience.",
-    code: `<section id="section-{{ section.id }}" class="store-locator-map">
+    },
+    simpleCodeSix: {
+        name: "Store Locator Map (Shopify Widget)",
+        id: "code6",
+        code: `<section id="section-{{ section.id }}" class="store-locator-map">
     <div class="store-locator-map__container">
         <div class="store_page_container">
 
@@ -1150,7 +1144,7 @@ if __name__ == "__main__":
     "presets": [{ "name": "Store Locator Map" }]
 }
 {% endschema %}`
-  }
+    }
 };
 
 export default sampleCodes;

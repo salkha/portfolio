@@ -109,6 +109,20 @@ const translations = {
       more: "Tools I worked with",
       soft: "Practical Projects & Implementations"
     },
+    codingButtonName: [
+      "Image Editing (part 1)",
+      "Image Editing (part 2)",
+      "Auto-Translate Shopify Collections",
+      "Generate Image Feed from Server",
+      "Update Supplier Prices from CSV",
+      "Store Locator Map (Shopify Widget)"
+    ],
+    code_description_1: "This script automates the process of organizing, renaming, and cropping product images for an e-commerce project. It starts by reading a list of GTIN-based product folders and a CSV feed with product details, then filters the data to match available products. Each image is renamed using a standardized format based on brand, gender, and color, and a maximum of eight images per product are copied to a new folder. Finally, the script crops each image to focus on the main product, removing extra transparent areas, resulting in clean, consistently named images ready for further use or display.",
+    code_description_2: "After the agency generates the additional 9th and 10th images, this script takes the renamed and cropped images and applies various platform-specific image profiles. It reorganizes and renames files according to custom rules, adds consistent backgrounds, adjusts padding, and ensures images are properly centered for each marketplace or storefront. The output is a set of ready-to-upload images for multiple platforms like Shopify, Fashionette, Breuninger, and others, with uniform sizes and visually optimized layouts.",
+    code_description_3: "This script automatically translates Shopify collection content from a source language into a target language using the OpenAI API. It retrieves translatable resources from Shopify via the GraphQL API, sends the content to the AI for translation while preserving HTML structure and placeholders, and then registers the translated text back into Shopify. The script intelligently handles both plain text and HTML sections (such as headings and paragraphs), ensuring formatting and dynamic variables remain intact. This allows stores to quickly generate and publish localized collection pages for multiple languages.",
+    code_description_4: "This script connects to a remote server via SFTP, scans product folders created within a specific date range, and counts available product images. It then matches those folders with product data from a CSV feed and automatically generates image URLs for each product. The script groups products by their parent ID, builds structured image galleries, and exports the result as a clean CSV file ready for marketplace or shop imports. This allows newly uploaded product images on the server to be quickly transformed into a usable product image feed.",
+    code_description_5: "This script reads a CSV file containing product item numbers, supplier identifiers, and new purchase prices (EK). It connects to the Pixi API, retrieves the existing suppliers for each product, and matches them with the supplier specified in the CSV. When a match is found, the script updates the supplier’s purchase price directly in Pixi. This enables quick and automated bulk updates of supplier costs while ensuring that only the correct supplier records are modified.",
+    code_description_6: "This Shopify section creates an interactive store locator with Google Maps integration. Store locations are defined in the section blocks and displayed both on the map as markers and in a searchable list. Users can search by store name, street, or city, and the map automatically centers and zooms when a store is selected from the list or when a marker is clicked. The layout is responsive, showing the map and store list side-by-side on desktop and stacked on mobile for an optimized browsing experience.",
     codeHeading: "Code Example",
     footer: "© 2026 Salman Khaled Ovi. All rights reserved."
   },
@@ -219,6 +233,20 @@ const translations = {
       more: "Tools, mit denen ich gearbeitet habe",
       soft: "Praktische Projekte & Implementierungen"
     },
+    codingButtonName: [
+      "Bildbearbeitung (Teil 1)",
+      "Bildbearbeitung (Teil 2)",
+      "Shopify-Kollektionen automatisch übersetzen",
+      "Bilder-Feed vom Server generieren",
+      "Lieferantenpreise aus CSV aktualisieren",
+      "Store Locator Karte (Shopify Widget)"
+    ],
+    code_description_1: "Dieses Skript automatisiert den Prozess der Organisation, Umbenennung und Zuschneidung von Produktbildern für ein E-Commerce-Projekt. Es beginnt mit dem Lesen einer Liste von GTIN-basierten Produktordnern und einem CSV-Feed mit Produktdetails, filtert dann die Daten, um verfügbare Produkte abzugleichen. Jedes Bild wird mit einem standardisierten Format basierend auf Marke, Geschlecht und Farbe umbenannt, und maximal acht Bilder pro Produkt werden in einen neuen Ordner kopiert. Schließlich schneidet das Skript jedes Bild zu, um sich auf das Hauptprodukt zu konzentrieren und zusätzliche transparente Bereiche zu entfernen, was zu sauberen, konsistent benannten Bildern führt, die für die weitere Verwendung oder Anzeige bereit sind.",
+    code_description_2: "Nachdem die Agentur die zusätzlichen 9. und 10. Bilder erstellt hat, nimmt dieses Skript die umbenannten und zugeschnittenen Bilder und wendet verschiedene plattformspezifische Bildprofile an. Es organisiert und benennt Dateien nach benutzerdefinierten Regeln um, fügt konsistente Hintergründe hinzu, passt den Abstand an und stellt sicher, dass die Bilder für jeden Marktplatz oder Shop korrekt zentriert sind. Das Ergebnis ist ein Satz von sofort hochladbaren Bildern für mehrere Plattformen wie Shopify, Fashionette, Breuninger und andere mit einheitlichen Größen und visuell optimierten Layouts.",
+    code_description_3: "Dieses Skript übersetzt automatisch Shopify-Kollektionen aus einer Quellsprache in eine Zielsprache mithilfe der OpenAI API. Es ruft übersetzbare Ressourcen über die Shopify GraphQL API ab, sendet den Inhalt an die KI zur Übersetzung unter Beibehaltung der HTML-Struktur und Platzhalter und registriert den übersetzten Text anschließend wieder in Shopify. Das Skript verarbeitet sowohl Klartext als auch HTML-Abschnitte (wie Überschriften und Absätze) intelligent, sodass Formatierung und dynamische Variablen erhalten bleiben. So können Shops schnell lokalisierte Kategorieseiten für mehrere Sprachen generieren und veröffentlichen.",
+    code_description_4: "Dieses Skript verbindet sich über SFTP mit einem Remote-Server, durchsucht Produktordner, die innerhalb eines bestimmten Datumsbereichs erstellt wurden, und zählt die verfügbaren Produktbilder. Anschließend gleicht es diese Ordner mit Produktdaten aus einem CSV-Feed ab und generiert automatisch Bild-URLs für jedes Produkt. Das Skript gruppiert Produkte nach ihrer Parent-ID, erstellt strukturierte Bildergalerien und exportiert das Ergebnis als saubere CSV-Datei, die für Marktplatz- oder Shop-Importe bereit ist. So können neu hochgeladene Produktbilder auf dem Server schnell in einen nutzbaren Produktbild-Feed umgewandelt werden.",
+    code_description_5: "Dieses Skript liest eine CSV-Datei mit Produktnummern, Lieferantenkennungen und neuen Einkaufspreisen (EK). Es verbindet sich mit der Pixi-API, ruft die vorhandenen Lieferanten für jedes Produkt ab und gleicht sie mit dem in der CSV angegebenen Lieferanten ab. Bei Übereinstimmung wird der Einkaufspreis des Lieferanten direkt in Pixi aktualisiert. So können Lieferantenpreise schnell und automatisiert in großen Mengen aktualisiert werden, wobei sichergestellt ist, dass nur die richtigen Lieferantendatensätze geändert werden.",
+    code_description_6: "Dieser Shopify-Abschnitt erstellt einen interaktiven Store Locator mit Google Maps-Integration. Die Standorte werden in den Abschnittsblöcken definiert und sowohl auf der Karte als Marker als auch in einer durchsuchbaren Liste angezeigt. Nutzer können nach Filialname, Straße oder Stadt suchen, und die Karte zentriert und zoomt automatisch, wenn ein Store aus der Liste ausgewählt oder ein Marker angeklickt wird. Das Layout ist responsiv und zeigt Karte und Store-Liste auf dem Desktop nebeneinander und auf Mobilgeräten untereinander für ein optimiertes Nutzungserlebnis.",
     codeHeading: "Code-Beispiel",
     footer: "© 2026 Salman Khaled Ovi. Alle Rechte vorbehalten."
   }
