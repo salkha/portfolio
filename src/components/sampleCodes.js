@@ -19,7 +19,7 @@ product_gtin = [
 ]
 
 # ---------------- STEP 2: Load CSV data ---------------- #
-csv_url = "https://pim.plytix.com/channels/65ce29a9e5a05f785786b45f/feed"
+csv_url = "https://pim.plytix.com/channels/xxxxxxxxxx/feed"
 df = pd.read_csv(csv_url, dtype=str)
 
 # ---------------- STEP 3: Filter by GTIN ---------------- #
@@ -641,11 +641,11 @@ import io
 import re
 
 # Configurable Parameters
-HOSTNAME = "dpssolutions.net"
-USERNAME = "dps_files"
-PASSWORD = "P0BSmdWUJci5dvXu"
+HOSTNAME = "xxxxxxxxx"
+USERNAME = "xxxxxxxxx"
+PASSWORD = "xxxxxxxxx"
 PORT = 22
-FOLDER_PATH = "/home/dps_files/files.dpssolutions.net/shoepassion/myb"
+FOLDER_PATH = "xxxxxxxxx"
 
 # Date Range: full 24-hour period
 today = datetime.today()
@@ -654,7 +654,7 @@ END_DATE = datetime(today.year, 8, 8, 23, 59, 59)
 START_DATE_STR = START_DATE.strftime("%d-%m-%Y")
 END_DATE_STR = END_DATE.strftime("%d-%m-%Y")
 
-CSV_URL = "https://feeds.datafeedwatch.com/111833/70be92540c57cdb2eac8322363585840ff48b2a0.csv"
+CSV_URL = "https://feeds.datafeedwatch.com/xxxxxxxxxx/xxxxxxxxxx.csv"
 DELIMITER = ','
 OUTPUT_CSV = f"myb_with_parent_{today.strftime('%d-%m-%Y')}.csv"
 
@@ -767,7 +767,7 @@ def create_matched_csv(folders, folder_mapping, image_counts):
             for group_index, group_item in group_rows.iterrows():
                 for i in range(1, num_images + 1):
                     final_df.loc[group_index, f'image_{i}'] = (
-                        f"https://www.old.mybudapester.com/shoepassion/myb/{full_folder_name}/images2d/img_2D_{str(i).zfill(4)}.png?c=e7e7e7"
+                        f"https://www.xxxxxxxxx.com/shoepassion/myb/{full_folder_name}/images2d/img_2D_{str(i).zfill(4)}.png?c=e7e7e7"
                     )
 
         final_df['product_gallery'] = ''
@@ -982,7 +982,7 @@ if __name__ == "__main__":
 
 <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
 <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDioUUV3qMZgtv1nFmEnNDH4BNpOgzk7dg&callback=initMap&libraries=places&v=weekly">
+    src="https://maps.googleapis.com/maps/api/js?key=xxxxxxxxxxxxx&callback=initMap&libraries=places&v=weekly">
 </script>
 
 <script>
@@ -1117,9 +1117,6 @@ if __name__ == "__main__":
     });
 </script>
 
-<style>
-/* Your CSS here, same as original */
-</style>
 
 {% schema %}
 {
