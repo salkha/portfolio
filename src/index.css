@@ -41,11 +41,14 @@ p {
 }
 
 @media (max-width: 600px) {
+  .lang-btn-group>.main-btn{
+    width: 45%;
+  }
   main.container {
     padding: 1rem 1rem 1rem;
   }
   .header-element{
-    margin-top: 20px;
+    margin-top: 20px !important;
   }
   .lang-btn-group {
     position: sticky !important;
@@ -343,12 +346,13 @@ body {
     font-size: 1.1rem;
   }
 
-  main.container {
-    padding: 1.5rem 1rem 1rem 1rem;
-  }
+
 }
 
 @media (max-width: 600px) {
+    main.container {
+    padding: 1.5rem 1rem 1rem 1rem !important;
+  }
   body {
     padding: 0;
     margin: 0;
