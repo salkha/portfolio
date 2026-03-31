@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CodingPagination from './components/CodingPagination';
 import Code from './components/Code';
+import Download from './components/Download';
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
@@ -45,6 +46,11 @@ function App() {
                 <Code lang={lang} />
               </>
             }
+          />
+          {/* Download Page */}
+          <Route
+            path="/download"
+            element={<Download />}
           />
         </Routes>
       </main>

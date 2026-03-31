@@ -40,6 +40,10 @@ function Header({ lang, setLang }) {
             className={`nav-btn${location.pathname === '/coding-skills' ? ' active' : ''}`}
             onClick={() => navigate('/coding-skills')}
           >{lang === 'en' ? 'Coding Skills' : 'Coding-Skills'}</button>
+          <button
+            className={`nav-btn${location.pathname === '/download' ? ' active' : ''}`}
+            onClick={() => navigate('/download')}
+          >{lang === 'en' ? 'Download' : 'Herunterladen'}</button>
         </div>
       </div>
 
