@@ -165,6 +165,7 @@ body {
 }
 
 .header {
+  width: 100%;
   background: #181c24;
   color: #aee9f7;
   padding: 1.2rem 0 1rem 0;
