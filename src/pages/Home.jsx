@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { ArrowRight, Code, Cpu, Globe } from 'lucide-react';
 
 const Home = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <div className="container">
@@ -28,23 +28,33 @@ const Home = () => {
 
         <motion.div 
           className="glass card"
-          style={{ marginTop: '3rem' }}
+          style={{ marginTop: '3rem', textAlign: 'center' }}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
           <h3 style={{ marginBottom: '1.5rem', color: 'var(--primary)' }}>{t.projectsIntro}</h3>
           {t.projectsParagraphs.map((p, idx) => (
-            <p key={idx} style={{ marginBottom: '1rem', color: 'var(--text-muted)' }}>{p}</p>
+            <p key={idx} style={{ marginBottom: '1rem', color: 'var(--text-muted)', marginLeft: 'auto', marginRight: 'auto', maxWidth: '800px' }}>{p}</p>
           ))}
           
-          <div className="projects-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', marginTop: '2.5rem' }}>
+          <div className="projects-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', marginTop: '2.5rem', marginBottom: '2.5rem' }}>
             {t.projects.slice(0, 3).map((project, idx) => (
-              <div key={idx} className="glass" style={{ padding: '1.5rem', borderRadius: '0.75rem' }}>
+              <div key={idx} className="glass" style={{ padding: '1.5rem', borderRadius: '0.75rem', textAlign: 'center' }}>
                 <h4 style={{ marginBottom: '0.5rem', color: 'var(--secondary)' }}>{project.title}</h4>
                 <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>{project.description}</p>
               </div>
             ))}
+          </div>
+
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <button 
+              className="btn btn-primary"
+              onClick={() => window.location.href = '/skills'}
+            >
+              {language === 'de' ? 'Alle Projekte ansehen' : 'View All Projects'}
+              <ArrowRight size={18} />
+            </button>
           </div>
         </motion.div>
       </section>

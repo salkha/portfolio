@@ -7,11 +7,13 @@ import Skills from './pages/Skills';
 import Download from './pages/Download';
 import Contact from './pages/Contact';
 
+import Background from './components/Background';
+
 function App() {
   return (
     <LanguageProvider>
       <Router>
-        <div className="bg-mesh"></div>
+        <Background />
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
