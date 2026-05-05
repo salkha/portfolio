@@ -26,7 +26,7 @@ const Home = () => {
           </p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="glass card"
           style={{ marginTop: '3rem', textAlign: 'center' }}
           initial={{ opacity: 0, scale: 0.9 }}
@@ -37,7 +37,7 @@ const Home = () => {
           {t.projectsParagraphs.map((p, idx) => (
             <p key={idx} style={{ marginBottom: '1rem', color: 'var(--text-muted)', marginLeft: 'auto', marginRight: 'auto', maxWidth: '800px' }}>{p}</p>
           ))}
-          
+
           <div className="projects-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', marginTop: '2.5rem', marginBottom: '2.5rem' }}>
             {t.projects.slice(0, 3).map((project, idx) => (
               <div key={idx} className="glass" style={{ padding: '1.5rem', borderRadius: '0.75rem', textAlign: 'center' }}>
@@ -45,16 +45,6 @@ const Home = () => {
                 <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>{project.description}</p>
               </div>
             ))}
-          </div>
-
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <button 
-              className="btn btn-primary"
-              onClick={() => window.location.href = '/skills'}
-            >
-              {language === 'de' ? 'Alle Projekte ansehen' : 'View All Projects'}
-              <ArrowRight size={18} />
-            </button>
           </div>
         </motion.div>
       </section>
