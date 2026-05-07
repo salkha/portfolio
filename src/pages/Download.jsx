@@ -12,6 +12,20 @@ import motivationEn from '../assets/motivation-en.pdf';
 const Download = () => {
   const { language } = useLanguage();
 
+  const syncTransition = {
+    duration: 1.0,
+    ease: "linear",
+  };
+
+  const syncVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: syncTransition,
+    },
+  };
+
   const content = {
     de: {
       title: 'Download Bereich',
@@ -53,12 +67,12 @@ const Download = () => {
 
   return (
     <div className="container">
-      <section style={{ textAlign: 'center' }}>
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+      <motion.section 
+        style={{ textAlign: 'center' }}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.div variants={syncVariants}>
           <h2 className="section-title">{t.title}</h2>
           <p style={{ marginBottom: '4rem', color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto 4rem' }}>
             {t.subtitle}
@@ -70,9 +84,7 @@ const Download = () => {
           <motion.div 
             className="glass card"
             whileHover={{ y: -10 }}
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
+            variants={syncVariants}
             style={{ padding: '3rem' }}
           >
             <div style={{ background: 'var(--primary-glow)', width: '60px', height: '60px', borderRadius: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 2rem' }}>
@@ -96,9 +108,7 @@ const Download = () => {
           <motion.div 
             className="glass card"
             whileHover={{ y: -10 }}
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4 }}
+            variants={syncVariants}
             style={{ padding: '3rem' }}
           >
             <div style={{ background: 'var(--secondary)', opacity: 0.9, width: '60px', height: '60px', borderRadius: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 2rem' }}>
@@ -118,7 +128,7 @@ const Download = () => {
             </a>
           </motion.div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };

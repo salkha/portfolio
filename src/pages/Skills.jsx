@@ -6,18 +6,33 @@ import CodeSection from '../components/CodeSection';
 const Skills = () => {
   const { t } = useLanguage();
 
+  const syncTransition = {
+    duration: 1.0,
+    ease: "linear",
+  };
+
+  const syncVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: syncTransition,
+    },
+  };
+
   return (
     <div className="container">
-      <section>
-        <h2 className="section-title">{t.skillsSectionTitles.main}</h2>
+      <motion.section
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.h2 className="section-title" variants={syncVariants}>
+          {t.skillsSectionTitles.main}
+        </motion.h2>
         
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           {/* Main Technical Skills */}
-          <motion.div 
-            className="glass card"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-          >
+          <motion.div className="glass card" variants={syncVariants}>
             <h3 style={{ marginBottom: '1.5rem', color: 'var(--primary)' }}>{t.skillsSectionTitles.technical}</h3>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
               {t.skills.map(skill => (
@@ -27,12 +42,7 @@ const Skills = () => {
           </motion.div>
 
           {/* More Tools */}
-          <motion.div 
-            className="glass card"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
-          >
+          <motion.div className="glass card" variants={syncVariants}>
             <h3 style={{ marginBottom: '1.5rem', color: 'var(--primary)' }}>{t.skillsSectionTitles.more}</h3>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
               {t.more_skills.map(skill => (
@@ -42,13 +52,7 @@ const Skills = () => {
           </motion.div>
 
           {/* Practical Implementations */}
-          <motion.div 
-            className="glass card"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4 }}
-            style={{ gridColumn: '1 / -1' }}
-          >
+          <motion.div className="glass card" variants={syncVariants} style={{ gridColumn: '1 / -1' }}>
             <h3 style={{ marginBottom: '1.5rem', color: 'var(--primary)' }}>{t.skillsSectionTitles.soft}</h3>
             <ul style={{ color: 'var(--text-muted)', paddingLeft: '1.5rem' }}>
               {t.more_soft_skills.map((skill, idx) => (
@@ -59,8 +63,10 @@ const Skills = () => {
         </div>
 
         {/* Code Examples Section */}
-        <CodeSection />
-      </section>
+        <motion.div variants={syncVariants} style={{ marginTop: '4rem' }}>
+          <CodeSection />
+        </motion.div>
+      </motion.section>
     </div>
   );
 };

@@ -74,6 +74,17 @@ h1, h2, h3 {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  background-size: 200% auto;
+}
+
+.animate-shine {
+  animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
 }
 
 /* Buttons */
@@ -230,10 +241,6 @@ nav.scrolled {
   transition: transform 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
 .code-tabs-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -243,17 +250,55 @@ nav.scrolled {
 
 .code-tab-btn {
   width: 100%;
+  min-height: 4rem;
   padding: 0.75rem 1rem !important;
   font-size: 0.9rem !important;
   text-align: center;
+  display: flex !important;
+  align-items: center;
   justify-content: center !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .code-tabs-container {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 0.5rem 0.5rem 1.5rem;
+    margin: 0 -0.5rem 1.5rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .code-tabs-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .code-tab-btn {
+    flex: 0 0 160px;
+    scroll-snap-align: center;
+    min-height: 3.5rem;
+  }
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-grid {
     grid-template-columns: 1fr;
-    gap: 0.75rem;
   }
 }
 

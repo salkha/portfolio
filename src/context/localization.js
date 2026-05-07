@@ -11,11 +11,11 @@ const translations = {
       "CSS",
       "JavaScript",
       "Python",
-      "GraphQL (Foundational knowledge)",
-      "SQL (Foundational knowledge)",
-      "Liquid (Experience developing Shopify themes)",
-      "PHP (Experience developing WordPress themes)",
-      "React (Currently learning via a Udemy course)",
+      "GraphQL",
+      "SQL",
+      "Liquid",
+      "PHP",
+      "React",
     ],
     more_skills: [
       "Shopify",
@@ -23,13 +23,14 @@ const translations = {
       "N8N",
       "Magento 1",
       "Plytix (PIM System)",
-      "Pixi (Warehouse Management System)",
       "GitHub",
       "Bitbucket",
       "ChatGPT",
       "Klaviyo",
       "Lugis Box",
-      "DataFeedWatch"
+      "Antigravity",
+      "DataFeedWatch",
+      "Pixi (Warehouse Management System)"
     ],
     more_soft_skills: [
 
@@ -110,12 +111,12 @@ const translations = {
       soft: "Practical Projects & Implementations"
     },
     codingButtonName: [
-      "Image Editing (part 1)",
-      "Image Editing (part 2)",
-      "Auto-Translate Shopify Collections",
-      "Generate Image Feed from Server",
-      "Update Supplier Prices from CSV",
-      "Store Locator Map (Shopify Widget)"
+      "Image Editor I",
+      "Image Editor II",
+      "AI Translation",
+      "Image Feed Gen",
+      "Price Updater",
+      "Store Locator"
     ],
     code_description_1: "This script automates the process of organizing, renaming, and cropping product images for an e-commerce project. It starts by reading a list of GTIN-based product folders and a CSV feed with product details, then filters the data to match available products. Each image is renamed using a standardized format based on brand, gender, and color, and a maximum of eight images per product are copied to a new folder. Finally, the script crops each image to focus on the main product, removing extra transparent areas, resulting in clean, consistently named images ready for further use or display.",
     code_description_2: "After the agency generates the additional 9th and 10th images, this script takes the renamed and cropped images and applies various platform-specific image profiles. It reorganizes and renames files according to custom rules, adds consistent backgrounds, adjusts padding, and ensures images are properly centered for each marketplace or storefront. The output is a set of ready-to-upload images for multiple platforms like Shopify, Fashionette, Breuninger, and others, with uniform sizes and visually optimized layouts.",
@@ -138,11 +139,11 @@ const translations = {
       "CSS",
       "JavaScript",
       "Python",
-      "GraphQL (Grundkenntnisse)",
-      "SQL (Grundkenntnisse)",
-      "Liquid (Erfahrung in der Entwicklung von Shopify-Themes)",
-      "PHP (Erfahrung in der Entwicklung von WordPress-Themes)",
-      "React (Derzeit über einen Udemy-Kurs lernend)"
+      "GraphQL",
+      "SQL",
+      "Liquid",
+      "PHP",
+      "React"
     ],
     more_skills: [
       "Shopify",
@@ -150,13 +151,14 @@ const translations = {
       "N8N",
       "Magento 1",
       "Plytix (PIM-System)",
-      "Pixi (Warehouse Management System)",
       "GitHub",
       "Bitbucket",
       "ChatGPT",
       "Klaviyo",
       "Lugis Box",
-      "DataFeedWatch"
+      "Antigravity",
+      "DataFeedWatch",
+      "Pixi (Warehouse Management System)"
     ],
     more_soft_skills: [
       "Technische Tests (Python-Skripte zur Validierung von Shopify-Produktdaten über GraphQL-API)",
@@ -234,12 +236,12 @@ const translations = {
       soft: "Praktische Projekte & Implementierungen"
     },
     codingButtonName: [
-      "Bildbearbeitung (Teil 1)",
-      "Bildbearbeitung (Teil 2)",
-      "Shopify-Kollektionen automatisch übersetzen",
-      "Bilder-Feed vom Server generieren",
-      "Lieferantenpreise aus CSV aktualisieren",
-      "Store Locator Karte (Shopify Widget)"
+      "Bildeditor I",
+      "Bildeditor II",
+      "KI-Übersetzung",
+      "Bild-Feed Gen",
+      "Preis-Updater",
+      "Store Locator"
     ],
     code_description_1: "Dieses Skript automatisiert den Prozess der Organisation, Umbenennung und Zuschneidung von Produktbildern für ein E-Commerce-Projekt. Es beginnt mit dem Lesen einer Liste von GTIN-basierten Produktordnern und einem CSV-Feed mit Produktdetails, filtert dann die Daten, um verfügbare Produkte abzugleichen. Jedes Bild wird mit einem standardisierten Format basierend auf Marke, Geschlecht und Farbe umbenannt, und maximal acht Bilder pro Produkt werden in einen neuen Ordner kopiert. Schließlich schneidet das Skript jedes Bild zu, um sich auf das Hauptprodukt zu konzentrieren und zusätzliche transparente Bereiche zu entfernen, was zu sauberen, konsistent benannten Bildern führt, die für die weitere Verwendung oder Anzeige bereit sind.",
     code_description_2: "Nachdem die Agentur die zusätzlichen 9. und 10. Bilder erstellt hat, nimmt dieses Skript die umbenannten und zugeschnittenen Bilder und wendet verschiedene plattformspezifische Bildprofile an. Es organisiert und benennt Dateien nach benutzerdefinierten Regeln um, fügt konsistente Hintergründe hinzu, passt den Abstand an und stellt sicher, dass die Bilder für jeden Marktplatz oder Shop korrekt zentriert sind. Das Ergebnis ist ein Satz von sofort hochladbaren Bildern für mehrere Plattformen wie Shopify, Fashionette, Breuninger und andere mit einheitlichen Größen und visuell optimierten Layouts.",
